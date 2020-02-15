@@ -3,7 +3,7 @@ const app = express();
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const knex = require('knex');
-const port = process.env.PORT
+const port = process.env.PORT || 5000
 
 const signin = require('./controllers/signin');
 const register = require('./controllers/register');
