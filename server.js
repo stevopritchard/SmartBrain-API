@@ -27,9 +27,10 @@ app.use(express.json());
 app.use(cors())
 
 app.get('/', (req, res) => {
-  db
-    .select('name', 'email').from('users')
-    .then(users => res.json(users))
+  // db
+  //   .select('name', 'email').from('users')
+  //   .then(users => res.json(users))
+  res.send("it's working")
 })
 
 app.post('/signin', (req, res) => {signin.handleSignIn(req, res, db, bcrypt)}) //this is called 'dependancy injection'
