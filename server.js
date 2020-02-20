@@ -13,10 +13,11 @@ const id = require('./controllers/id');
 const db = knex ({
   client: 'pg', //...because we have chosen PostgreSQL as our database library
   connection: {
-    host : 'postgresql-amorphous-85167',
-    user : 'Stevo',
-    password : '',
-    database : 'smart-brain'
+    host : process.env.DATABASE_URL,
+    // user : 'Stevo',
+    // password : '',
+    // database : 'smart-brain'
+    ssl: true
   }
 });
 
